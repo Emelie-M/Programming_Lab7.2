@@ -22,7 +22,7 @@ public class Automaton
         this.numberOfCells = numberOfCells;
         state = new int[numberOfCells];
         // Seed the automaton with a single 'on' cell in the middle.
-        state[numberOfCells / 2] = 1;
+        state[numberOfCells / 7] = 1;
     }
     
     /**

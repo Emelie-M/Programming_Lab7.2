@@ -7,7 +7,8 @@
  * 25. yes its the same pattern
  * 26. theres 10, it specified the value to each element, its used to fill it with one element.
  * 27. the patterns stays the same, its just the pattern is not in the middle its changed more towars the left.
- * 
+ * 29. it does affect the result, it give nothing. i think its because state its for the first element and nextState is the rest of the element.
+ * 30. couldnt do it sorry
  * 
  * 
  */

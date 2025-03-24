@@ -47,6 +47,7 @@ public class Automaton
     public void update()
     {
         // Build the new state in a separate array.
+        
         int[] nextState = new int[state.length];
         
         // Naively update the state of each cell
@@ -76,15 +77,22 @@ public class Automaton
             nextState[i] = (left + center + right) % 2;
         }
         state = nextState;*/
-        
+        //questoon 31
         int left = 0;
         int center = state[0];
         for (int i=0; i<state.length; i++){
             int right = i + 1 < state.length ? state[i+1] : 0;
-            nextState[i] = (left + center + right) % 2;
+            //nextState[i] = (left + center + right) % 2;
+            nextState[i] = calculateNextState(left, center, right);
             left = center;
             center = right;
         }   
+    }
+    
+    //question 32
+    public int calculateNextState(int left, int center, int right)
+    {
+        return (left + center + right) % 2;
     }
     
     /**
